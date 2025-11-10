@@ -1,0 +1,13 @@
+//week10_2_arduino_pin2
+void setup() {
+  pinMode(2, INPUT_PULLUP); //拉高 變成5V 真的按下去變0V
+}// pin2變成按鈕, 可以HIGH高(沒按) 可以LOW低(按)
+
+void loop() {
+  if(digitalRead(2)==LOW){ // 如果pin 2 有按下去
+    tone(8,523,100); // 發出 523 的 DO
+    delay(100);
+    tone(8,784,100); // 發出 784 的 SO
+    delay(100);
+  }
+}
